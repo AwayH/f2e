@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* reset -------------------- */
+
+body {
+    font-family: "Noto Sans TC", serif;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+/* header ---------------- */
+
+.header {
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-foot {
+    display: none;
+}
+
+/* nav ------------------ */
+
+.nav-ul {
+    display: flex;
+}
+
+.nav-btnWrap {
+    display: none;
+}
