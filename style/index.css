@@ -7,6 +7,66 @@
   --opacity-color: rgba(255, 255, 255, .3);
 }
 
+/* animation -------------------- */
+
+.ani-fade {
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.ani-delay-5 {
+  animation-delay: 5s;
+}
+
+.ani-delay-10 {
+  animation-delay: 10s;
+}
+
+.ani-delay-15 {
+  animation-delay: 15s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+.ani-blend-color {
+  animation-name: blend-color;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blend-color {
+  0% {
+    color: #fff;
+  }
+  5% {
+    color: var(--primary-color);
+  }
+  50% {
+    color: var(--primary-color);
+  }
+  55% {
+    color: #fff;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
 /* reset -------------------- */
 
 body {
@@ -36,6 +96,12 @@ img {
   display: none;
 }
 
+.header-fixed {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
 /* nav ------------------ */
 
 .nav-ul {
@@ -63,7 +129,7 @@ img {
 
 .banner {
   position: relative;
-  background-color: pink;
+  /* background-color: pink; */
   aspect-ratio: 16 / 9;
   display: flex;
   justify-content: center;
