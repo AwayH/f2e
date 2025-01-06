@@ -1,34 +1,126 @@
 @charset "utf-8";
 
+/* variables ------------------ */
+
+:root {
+  --primary-color: #24b4d7;
+  --opacity-color: rgba(255, 255, 255, .3);
+}
+
 /* reset -------------------- */
 
 body {
-    font-family: "Noto Sans TC", serif;
+  font-family: "Noto Sans TC", serif;
 }
 
 img {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 /* header ---------------- */
 
 .header {
-    background-color: pink;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-head,
+.header-body,
+.header-foot {
+  padding: .5rem .7rem;
 }
 
 .header-foot {
-    display: none;
+  display: none;
 }
 
 /* nav ------------------ */
 
 .nav-ul {
-    display: flex;
+  display: flex;
+}
+
+.nav-li {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
 }
 
 .nav-btnWrap {
-    display: none;
+  display: none;
+}
+
+/* banner ---------------- */
+
+.banner {
+  position: relative;
+  background-color: pink;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-head {
+  color: var(--primary-color);
+  text-align: center;
+  padding: 5rem;
+  z-index: 2;
+  position: relative;
+  /* background-color: rgba(255, 255, 255, .5); */
+  /* background-color: pink; */
+  background-image: linear-gradient(
+    -45deg,
+    var(--opacity-color) 0%,
+    var(--opacity-color) 25%,
+    transparent 26%,
+    transparent 50%,
+    var(--opacity-color) 51%,
+    var(--opacity-color) 75%,
+    transparent 76%,
+    transparent 100%
+  );
+  background-size: 7px 7px;
+}
+
+.banner-body {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.banner-subtitle {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.banner-description {
+  font-size: 2rem;
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background-color: pink;
 }
