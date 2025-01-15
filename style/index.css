@@ -5,6 +5,9 @@
 :root {
   --primary-color: #24b4d7;
   --opacity-color: rgba(255, 255, 255, .3);
+  --width-m: 1200px;
+  --width-s: 1000px;
+
 }
 
 /* animation -------------------- */
@@ -70,11 +73,11 @@
 /* helper ------------------ */
 
 .h-container-m {
-  max-width: 1200px;
+  max-width: var(--width-m);
 }
 
 .h-container-s {
-  max-width: 1000px;
+  max-width: var(--width-s);
 }
 
 .h-mx-auto {
@@ -107,7 +110,19 @@
   background-size: 7px 7px;
 }
 
+.h-text-center {
+  text-align: center;
+}
+
+.h-text-right {
+  text-align: right;
+}
+
 /* reset -------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Noto Sans TC", serif;
@@ -420,4 +435,124 @@ img {
   margin-top: 1rem;
   font-size: 1.2rem;
   color: rgba(0, 0, 0, .4);
+}
+
+/* table ----------------------- */
+
+.tableWrap {
+  overflow: auto;
+}
+
+.table {
+  background-color: #fff;
+  width: 100%;
+}
+
+.table thead {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+.table th {
+  font-weight: 600;
+}
+
+/* .table td:first-child {
+  font-weight: 600;
+} */
+
+.table-border th,
+.table-border td {
+  border: solid 1px #ccc;
+}
+
+.table-stripe tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.table-hover tbody tr {
+  transition-duration: .3s;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #d9f7ff;
+}
+
+.table-nowrap th, 
+.table-nowrap td {
+  white-space: nowrap;
+}
+
+.table-size-m th, 
+.table-size-m td {
+  font-size: 1.2rem;
+}
+
+/* footer -------------------------- */
+
+.footer {
+  background-color: #333;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, .5);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+/* aside ---------------------- */
+
+.aside {
+  position: fixed;
+  bottom: 300px;
+  /* right: 100px; */
+  margin-left: calc( var(--width-m) + 20px);
+}
+
+/* social ------------------ */
+
+.social {
+  display: block;
+  padding: 1rem .7rem;
+  color: #fff;
+  /* background-color: yellowgreen; */
+}
+
+.social-ig {
+  background-image: linear-gradient(45deg, yellow, red, #b523b0);
+}
+
+.social-fb {
+  background-color: #0864f7;
+}
+
+.social-x {
+  background-color: #000;
+}
+
+.social-up {
+  color: rgba(0, 0, 0, .3);
+}
+
+@media screen and (max-width: 768px) {
+  .header-body {
+    display: none;
+  }
+
+  .header-foot {
+    display: block;
+  }
 }
