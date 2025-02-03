@@ -139,6 +139,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition-duration: .7s;
 }
 
 .header-head,
@@ -159,6 +160,10 @@ img {
 
 .header-active {
   background-color: rgba(255, 255, 255, .5);
+}
+
+.header-img-logo {
+  transition-duration: .7s;
 }
 
 .header-active .header-img-logo {
